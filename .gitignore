@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Run outputs (never commit data, caches, crops, or reports)
+work/
+audit/
+parsed/
+runs/
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png
+*.svg
+report.html
+raw_*.json
+cache_*.json
+runstats_*.json
+provenance_*.json
+metrics.json
+index.json
+pairs.json
+*.csv
+*.pt
+*.pth
+*.safetensors
+
+# Notebooks: keep the generated sources, drop execution state
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

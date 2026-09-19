@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccaudit"
+version = "0.1.0"
+description = "Interventional faithfulness auditing for explainable deepfake detectors."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+  "numpy>=1.24",
+  "opencv-python-headless>=4.8",
+  "mediapipe>=0.10.20",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+gpu = ["torch", "timm", "transformers>=4.45", "accelerate", "qwen-vl-utils"]
+tuning = ["peft", "bitsandbytes"]
+inpaint = ["simple-lama-inpainting"]
+
+[tool.setuptools.packages.find]
+include = ["ccaudit*"]

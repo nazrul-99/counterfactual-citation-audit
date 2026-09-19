@@ -1,0 +1,8 @@
+numpy>=1.24
+opencv-python-headless>=4.8
+mediapipe>=0.10.20
+tqdm
+# GPU stages only:
+# torch, timm, transformers>=4.45, accelerate, qwen-vl-utils
+# peft, bitsandbytes            (4-bit + CSET)
+# simple-lama-inpainting        (INPAINT_METHOD="lama")
