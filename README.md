@@ -22,7 +22,7 @@ $$\Delta(k) = p(\text{identity}_k) - p(\text{real}_k),$$
 
 which cancels the baseline $p(x^f)$ and, with it, the compression history shared by both conditions. Two metrics follow:
 
-- **Faithfulness score.** $\mathrm{FS} = \Delta(\text{cited}) - \operatorname{mean}_{k \neq \text{cited}} \Delta(k)$. A detector whose citation is unrelated to its computation has $\mathrm{FS} \approx 0$ whatever its detection accuracy.
+- **Faithfulness score.** $\mathrm{FS} = \Delta(\text{cited}) - \frac{1}{K-1}\sum_{k \neq \text{cited}} \Delta(k)$. A detector whose citation is unrelated to its computation has $\mathrm{FS} \approx 0$ whatever its detection accuracy.
 - **Reverse citation recall.** Among (sample, region) pairs where injecting region $k$'s manipulation flips the verdict to fake, the fraction in which the detector cites $k$, reported against the best-constant-guess prior.
 
 A detector is called faithful when the lower confidence bound of FS exceeds zero and the lower bound of reverse recall exceeds the prior. Confidence intervals come from a cluster bootstrap over clips; Holm–Bonferroni is applied across regions and across detectors.
